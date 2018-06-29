@@ -26,9 +26,9 @@ rbetabinom(n, prob, size, theta, shape1, shape2)
    The beta-binomial distribution is the result of
 compounding a beta distribution of probabilities with
 a binomial sampling process.  The density function is
-\deqn{p(x) = \frac{C(N,x) \mbox{Beta}(N-x+\theta(1-p),x+\theta p)}%
-{\mbox{Beta}(\theta(1-p),\theta p)}%
-}{p(x) = (C(N,x)*Beta(N-x+theta*(1-p),x+theta*p))/Beta(theta*(1-p),theta*p)}
+\deqn{p(x) = \frac{C(N,x) \mbox{Beta}(x+\theta p,N-x+\theta(1-p))}%
+{\mbox{Beta}(\theta p,\theta(1-p))}%
+}{p(x) = (C(N,x)*Beta(x+theta*p,N-x+theta*(1-p)))/Beta(theta*p,theta*(1-p))}
 The parameters \code{shape1} and \code{shape2} are
 the more traditional parameterization in terms of
 the parameters of the per-trial probability distribution.
@@ -38,7 +38,8 @@ the parameters of the per-trial probability distribution.
   If \code{x} is non-integer, the result is zero (and
   a warning is given).
 }
-\references{Morris (1997), American Naturalist 150:299-327}
+\references{Morris (1997), American Naturalist 150:299-327;
+\url{https://en.wikipedia.org/wiki/Beta-binomial_distribution}}
 \note{Although the quantile (qbetabinom)
   and cumulative distribution (pbetabinom)
   functions are not available, in a pinch they
