@@ -46,10 +46,15 @@ varnames=c("x","y"),use_plyr=TRUE,.progress="none",...)
   \item{z}{z matrix}
 }
 \note{
-  You must explicitly install the \code{rgl} package
-  (via \code{install.packages("rgl")}) before using \code{sys3d="persp"}.
+  \itemize{
+    \item You must explicitly install the \code{rgl} package
+    (via \code{install.packages("rgl")}) before using
+    \code{sys3d="persp"}.
+    \item if you encounter the error \sQuote{Results must have one or
+      more dimensions}, try \code{use_plyr=FALSE} or use \code{c()}
+    to remove attributes from the result of your expression
+  }
 }
-\author{Ben Bolker}
 \seealso{\code{\link{outer}}, \code{\link{curve}}}
 \examples{
 curve3d(cos(2*pi*x)+sin(2*pi*y/3),
@@ -61,7 +66,7 @@ curve3d(cos(2*pi*x)+sin(2*pi*y/3),
 curve3d(x*cos(2*pi*a/x)+sin(2*pi*b/y),
  from=c(0,0),to=c(1,1),sys3d="wireframe",
 varnames=c("a","b"))  ## identical
-par(mfrow=c(2,2))
+op <- par(mfrow=c(2,2))
 curve3d(cos(2*pi*x)+sin(2*pi*y/3),
  from=c(0,0),to=c(1,1),sys3d="image")
 curve3d(x*cos(2*pi*a/x)+sin(2*pi*b/y),
@@ -74,6 +79,7 @@ varnames=c("a","b"))
 curve3d(cos(2*pi*x)+sin(2*pi*y/3),
  from=c(0,0),to=c(1,1),sys3d="image")
 curve3d(cos(2*pi*x)+sin(2*pi*y/3),
- sys3d="contour",add=TRUE)
+        sys3d="contour",add=TRUE)
+par(op)
 }
 \keyword{hplot}

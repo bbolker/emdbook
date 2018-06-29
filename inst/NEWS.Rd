@@ -4,6 +4,13 @@
 \title{emdbook News}
 \encoding{UTF-8}
 
+\section{Changes in version 1.3.10 (2018-05-18)}{
+  \itemize{
+    \item update package help page
+    \item add goby data
+    \item improve curve3d documentation (potential plyr issues)
+  }
+}
 \section{Changes in version 1.3.9}{
   \itemize{
     \item add imports for R CMD check
