@@ -27,17 +27,14 @@
 }
 \details{
   These data have been made available by the author for pedagogical use;
-  out of courtesy to her,
+  out of courtesy,
   please don't redistribute (outside of the context of this
   package) or use in an academic publication without requesting
   permission (via the package maintainer).
 }
 \examples{
-\dontrun{
-    load(url("http://www.math.mcmaster.ca/bolker/R/misc/GobySurvival.RData"))
-    ## midpoint of survival times
-    gg <- transform(GobySurvival,mid=(d1+d2)/2)
-    plot(table(gg$mid))
-}
+## midpoint of survival times
+gg <- transform(GobySurvival,mid=(d1+d2)/2)
+plot(table(gg$mid))
 }
 \keyword{datasets}
