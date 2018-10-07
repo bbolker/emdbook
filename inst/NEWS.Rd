@@ -7,6 +7,7 @@
 \section{Changes in version 1.3.10.9000}{
  \itemize{
     \item fix typo in dbetabinom help page
+    \item dmvnorm slightly more robust
 }
 }
 \section{Changes in version 1.3.10 (2018-05-18)}{
