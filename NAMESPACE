@@ -12,7 +12,7 @@ export(lambertW,lWasymp,lambertW_base,
        dmvnorm,dbetabinom,rbetabinom,
        calcslice,gridsearch2d,contour3d,apply2d,curve3d)
 ## importFrom(rgl,persp3d,lines3d)
-importFrom(MASS,kde2d)
+importFrom(MASS,kde2d,ginv)
 importFrom(coda,mcmc)
 importFrom(bbmle,parnames)
 importFrom(plyr,aaply)

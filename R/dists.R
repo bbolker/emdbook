@@ -68,18 +68,14 @@ dmvnorm <- function (x, mu, Sigma, log = FALSE, tol = 1e-06) {
     ev <- eS$values
     if (!all(ev >= -tol * abs(ev[1]))) 
         stop("Sigma is not positive definite")
-    z = t(x - mu)
-    logdetS = try(determinant(Sigma, logarithm = TRUE)$modulus,
-                  silent=TRUE)
+    z <- t(x - mu)
+    logdetS <- try(determinant(Sigma, logarithm = TRUE)$modulus,
+                   silent=TRUE)
     attributes(logdetS) <- NULL
-    iS = try(solve(Sigma))
-    if (class(iS) == "try-error" || class(logdetS) == "try-error") {
-        warning("difficulty inverting/taking determinant of Var-Cov matrix")
-        return(rep(NA,nrow(x)))
-    }
-    ssq = diag(t(z) %*% iS %*% z)
-    loglik = -(n * (log(2*pi)) +  logdetS + ssq)/2
-    if (log) loglik else exp(loglik)
+    iS <- MASS::ginv(Sigma)
+    ssq <- diag(t(z) %*% iS %*% z)
+    loglik <- -(n * (log(2*pi)) +  logdetS + ssq)/2
+    if (log) return(loglik) else return(exp(loglik))
   }
 
 

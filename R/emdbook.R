@@ -21,7 +21,8 @@ get.emdbook.packages <- function() {
 ## meanval: values of the mean (possibly named)
 ## vars: names
 ## Sigma: var-cov function
-deltavar <- function(fun,meanval=NULL,vars,Sigma,verbose=FALSE) {
+deltavar <- function(fun,meanval=NULL,vars,Sigma,verbose=FALSE,
+                     symbderivs=NULL) {
   expr <- as.expression(substitute(fun))
   nvals <- length(eval(expr,envir=as.list(meanval)))
   vecexp <- nvals>1 ## is the result a vector?
@@ -30,6 +31,7 @@ deltavar <- function(fun,meanval=NULL,vars,Sigma,verbose=FALSE) {
       stop("must specify either variable names or named values for means")
     vars <- names(meanval)
   }
+  ## STOPPED HERE
   derivs <- try(lapply(vars,D,expr=expr),silent=TRUE)
   symbderivs <- TRUE
   if (inherits(derivs,"try-error")) {
