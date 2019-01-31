@@ -13,7 +13,7 @@ Authors@R: c(person("Ben","Bolker",email="bolker@mcmaster.ca", role=c("aut","cre
 	   person("R. Scot","Duncan",role="dtc")
 	   )
 Description: Auxiliary functions and data sets for "Ecological Models and Data", a book presenting maximum likelihood estimation and related topics for ecologists (ISBN 978-0-691-12522-0).
-Suggests: R2WinBUGS, ellipse, SuppDists, numDeriv, testthat, rgl
+Suggests: R2jags, ellipse, SuppDists, numDeriv, testthat, rgl
 Imports: MASS, lattice, plyr, coda, bbmle
 License: GPL
 URL: http://www.math.mcmaster.ca/bolker/emdbook

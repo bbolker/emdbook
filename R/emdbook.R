@@ -4,7 +4,7 @@ get.emdbook.packages <- function() {
      "bbmle","chron",
      "coda","ellipse","ggplot2",
      "gplots","gtools","gdata",
-     "MCMCpack","deSolve","plotrix","R2WinBUGS","reshape","rgl",
+     "MCMCpack","deSolve","plotrix","reshape","rgl",
      "scatterplot3d")
    inst.pkgs = rownames(installed.packages())
    newpkgs <- pkglist[!pkglist %in% inst.pkgs]
