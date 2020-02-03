@@ -25,7 +25,6 @@ ncredint(pvec,npost,level=0.95,tol=0.01,verbose=FALSE)
     return detailed information on the probability cutoff and
     realized area of the credible interval; if FALSE, just lower
     and upper bounds of the credible region}
-  \item{...}{additional arguments to \code{\link{density}}}
   \item{pvec}{numeric vector of parameter values}
   \item{npost}{numeric vector of posterior density values corresponding
     to \code{pvec}}
