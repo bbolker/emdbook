@@ -89,7 +89,7 @@ deltamethod <- function(fun,z,var="x",params=NULL,max.order=2) {
   gvals <- gamma(c(1,3:(max.order+1)))
   deltavals <- cumsum(c(1,mvals)*c(evals[-(2)])/gvals)
   results <- c(r0,deltavals)
-  names(results) = c("delta","E(f(x))",paste("delta",2:max.order,sep=""))
+  names(results) = c("E(f(x)) [true]","f(E(x)) [naive]",paste("delta",2:max.order,sep=""))
   results
 }
 
