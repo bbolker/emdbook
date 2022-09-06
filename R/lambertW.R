@@ -67,8 +67,9 @@ lambertW_base <- function(z,b=0,maxiter=10,eps=.Machine$double.eps,min.imag=1e-9
             & abs(Im(t[ok])) < (2.48*eps)*(1.0 + abs(Im(w[ok])))))
       break
   }
-  if (n==maxiter) warning(paste("iteration limit (",maxiter,
-        ") reached, result of W may be inaccurate",sep=""))
+  if (n==maxiter) warning(
+                      sprintf("iteration limit (%d) reached, result of W may be inaccurate (z=%f)",
+                              maxiter,z))
   if (all(abs(Im(w[!is.na(w)]))<min.imag)) w <- as.numeric(w)
   if (sum(badz)>0) {
     w.new <- rep(NA_real_,length(z.old))
