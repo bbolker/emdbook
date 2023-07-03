@@ -4,6 +4,23 @@
 \title{emdbook News}
 \encoding{UTF-8}
 
+\section{Changes in version 1.3.13}{
+  \itemize{
+    \item various cleanup (CITATION file, junk test directory, old URLs,
+  etc.)
+    \item \code{deltamethod}: attempt to improve handling of functions
+    missing from derivs table when warning language is not English
+    \item \code{lambertW}: slightly improved reporting when iteration
+  limits reached
+  }
+}
+
+\section{Changes in version 1.3.12 (2020-02-19)}{
+  \itemize{
+    \item documentation/CRAN-compatibility update
+  }
+}
+
 \section{Changes in version 1.3.11}{
   \itemize{
     \item remove R2WinBUGS support per CRAN request

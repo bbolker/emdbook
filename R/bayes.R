@@ -68,7 +68,7 @@
 
 HPDregionplot <- function(x,vars=1:2,h,n=50,lump=TRUE,prob=0.95,
                           xlab=NULL,ylab=NULL,lims=NULL,...) {
-  parnames <- if (class(x)=="mcmc.list") colnames(x[[1]]) else colnames(x)
+  parnames <- if (inherits(x, "mcmc.list")) colnames(x[[1]]) else colnames(x)
   if (is.character(vars)) {
     vars <- match(vars,parnames)
     if (any(is.na(vars))) stop("some variable names do not match")
@@ -76,11 +76,11 @@ HPDregionplot <- function(x,vars=1:2,h,n=50,lump=TRUE,prob=0.95,
   varnames <- parnames[vars]
   mult <- (class(x)=="mcmc.list" && !lump)
   if (mult) stop("multiple chains without lumping not yet implemented")
-  if (class(x)=="mcmc.list") {
+  if (inherits(x, "mcmc.list")) {
     if (lump) var1 <- c(sapply(x,function(z)z[,vars[1]]))
     else var1 <- lapply(x,function(z)z[,vars[1]])
   } else var1 <- x[,vars[1]]
-  if (class(x)=="mcmc.list") {
+  if (inherits(x,"mcmc.list")) {
     if (lump) var2 <- c(sapply(x,function(z)z[,vars[2]]))
     else var2 <- lapply(x,function(z)z[,vars[2]])
   } else var2 <- x[,vars[2]]

@@ -23,7 +23,7 @@
   J. Wilson, pers. comm.; "Habitat quality, competition and recruitment
   processes in two marine gobies", Ph.D. thesis, University of Florida
   (2004);
-  \url{http://uf.catalog.fcla.edu/permalink.jsp?20UF022544524}
+  \url{https://ufdc.ufl.edu/UFE0004180/00001/pdf}
 }
 \details{
   These data have been made available by the author for pedagogical use;

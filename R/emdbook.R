@@ -36,12 +36,18 @@ deltavar <- function(fun,meanval=NULL,vars,Sigma,verbose=FALSE
   derivs <- try(lapply(vars,D,expr=expr),silent=TRUE)
   ## symbderivs <- TRUE
   if (inherits(derivs,"try-error")) {
-      if (length(grep("is not in the derivatives table",derivs))) {
+      w <- NULL
+      if (!Sys.getenv("LANGUAGE") %in% c("", "en")) {
+          w <- "error (symbols not in derivative table?): using numeric derivatives"
+      } else if (any(grepl("derivatives table", derivs))) {
+          w <- "some symbols not in derivative table, using numeric derivatives"
+      }
+      if (!is.null(w)) {
           ## take numeric derivative
           symbderivs <- FALSE
-          warning("some symbols not in derivative table, using numeric derivatives")
+          warning(w)
           nderivs <- with(as.list(meanval),
-                         numericDeriv(expr[[1]],theta=vars))
+                          numericDeriv(expr[[1]],theta=vars))
           nderivs <- attr(nderivs,"gradient")
       } else {
           stop(paste("Error within derivs:",derivs))
