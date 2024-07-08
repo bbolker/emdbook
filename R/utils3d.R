@@ -26,6 +26,7 @@ curve3d <- function (expr, from=c(0,0), to=c(1,1),
                      varnames = c("x","y"),
                      use_plyr=TRUE,
                      .progress="none",
+                     data = NULL,
                      ...) 
 {
     vars <- lapply(as.list(varnames),parse,file="",n=NULL)
@@ -71,8 +72,7 @@ curve3d <- function (expr, from=c(0,0), to=c(1,1),
         exp(seq(log(from[2]), log(to[2]), length = n))
     } else seq(from[2], to[2], length = n[2])
     tmpfun <- function(x,y) {
-        env <- list(x,y)
-        names(env) <- varnames
+        env <- c(setNames(list(x,y), varnames), data)
         ## SKIP the inside of curve3d, go back one more level ...
         eval(expr, envir = env, enclos = parent.frame(2))
     }
