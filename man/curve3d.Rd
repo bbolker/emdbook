@@ -12,7 +12,8 @@ xlab=varnames[1],
 ylab=varnames[2],
 zlab = NULL, log = NULL, sys3d = c("persp", "wireframe", "rgl",
 "contour", "image", "none"),
-varnames=c("x","y"),use_plyr=TRUE,.progress="none",...)
+varnames=c("x","y"),use_plyr=TRUE,.progress="none",
+data = NULL, ...)
 }
 \arguments{
   \item{expr}{a mathematical expression using \code{x} and \code{y} as
@@ -37,7 +38,8 @@ varnames=c("x","y"),use_plyr=TRUE,.progress="none",...)
   \item{use_plyr}{use methods from the \code{plyr} package?}
   \item{.progress}{progress bar type (\code{"none"}, \code{"text"},
     \code{"tk"},\code{"win"}: see \code{\link{create_progress_bar}})}
-    \item{\dots}{additional arguments to the plotting functions}
+  \item{data}{additional data (as a list) to use in evaluating \code{expr}}
+  \item{\dots}{additional arguments to the plotting functions}
 }
 \value{
   invisibly, a list of
