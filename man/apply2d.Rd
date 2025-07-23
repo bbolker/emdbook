@@ -15,7 +15,7 @@ apply2d(fun, x, y, ..., use_plyr = TRUE, .progress="none")
   \item{\dots}{additional arguments to \code{fun}}
   \item{use_plyr}{use methods from the \code{plyr} package?}
   \item{.progress}{progress bar type (\code{"none"}, \code{"text"},
-    \code{"tk"},\code{"win"}: see \code{\link{create_progress_bar}})}
+    \code{"tk"},\code{"win"}: see \code{\link[plyr]{create_progress_bar}})}
 
 }
 \value{

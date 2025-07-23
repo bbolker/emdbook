@@ -36,7 +36,5 @@ data(DamselRecruitment_sum)
   Schmitt et al. (1999), "Quantifying the effects of multiple processes
   on local abundance", Ecology Letters 2:294-303. DOI: 10.1046/j.1461-0248.1999.00086.x (Original data kindly provided
   by Schmitt and Holbrook.)
-  The original version of this data set is available
-  from the \href{http://mcr.lternet.edu/cgi-bin/showDataset.cgi?docid=knb-lter-mcr.2}{Moorea Coral Reef LTER data repository}.
 }
 \keyword{datasets}

@@ -37,7 +37,7 @@ data = NULL, ...)
   \item{varnames}{names of variables to substitute}
   \item{use_plyr}{use methods from the \code{plyr} package?}
   \item{.progress}{progress bar type (\code{"none"}, \code{"text"},
-    \code{"tk"},\code{"win"}: see \code{\link{create_progress_bar}})}
+    \code{"tk"},\code{"win"}: see \code{\link[plyr]{create_progress_bar}})}
   \item{data}{additional data (as a list) to use in evaluating \code{expr}}
   \item{\dots}{additional arguments to the plotting functions}
 }

@@ -21,6 +21,7 @@ importFrom("grDevices", "contourLines")
 importFrom("graphics", "axTicks", "axis", "contour", "image",
              "locator", "mtext", "par", "persp", "rect")
 importFrom("stats", "D", "approx", "dchisq", "dnbinom",
-             "na.omit", "pchisq", "plogis", "qchisq", "qlogis", "rbeta",
-             "rbinom", "rchisq", "rnbinom", "runif", "uniroot", "var", "coef")
+           "na.omit", "pchisq", "plogis", "qchisq", "qlogis", "rbeta",
+           "rbinom", "rchisq", "rnbinom", "runif", "uniroot", "var", "coef",
+           "setNames")
 importFrom("utils", "install.packages", "installed.packages")

@@ -4,7 +4,14 @@
 \title{emdbook News}
 \encoding{UTF-8}
 
-\section{Changes in version 1.3.13}{
+\section{Changes in version 1.3.14}{
+  \itemize{
+    \item CRAN tweaks
+    \item added data argument to \code{curve3d}
+  }
+}
+
+\section{Changes in version 1.3.13 (2023-07-03)}{
   \itemize{
     \item various cleanup (CITATION file, junk test directory, old URLs,
   etc.)
@@ -21,7 +28,7 @@
   }
 }
 
-\section{Changes in version 1.3.11}{
+\section{Changes in version 1.3.11 (2019-02-12)}{
   \itemize{
     \item remove R2WinBUGS support per CRAN request
     \item fix typo in dbetabinom help page
@@ -191,7 +198,7 @@
 	    \item added lump.mcmc.list()
 	    \item changed dataset names, moved lily and goby data sets to emdbookx
 	    \item added require(coda) to as.mcmc.bugs
-	    \item added {d,r}betabinom
+	    \item added [d,r]betabinom
 	    \item added SeedPred_mass data (numeric vector of seed masses)
 	    \item added numeric derivatives to deltavar
 	    \item fixed bug in calcslice (not referring to correct function)
